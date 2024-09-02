@@ -1,0 +1,28 @@
+import java.util.Scanner;
+public class RatFood
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        int n =sc.nextInt();
+        int f =sc.nextInt();
+        int h =sc.nextInt();
+        int j=0,res=0;
+        int[] arr = new int[h];
+        for(int i=0;i<h;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+        for(int i=0;i<h;i++)
+        {
+            int k=n*f;
+            j+=arr[i];
+            if(j>=k)
+            {
+                res=i+1;
+                break;
+            }
+        }
+        System.out.print(res+" ");
+    }
+}
