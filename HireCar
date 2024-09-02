@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class HireCar
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        int R1 = sc.nextInt();
+        int N = sc.nextInt();
+        int R2 = sc.nextInt();
+        int X = sc.nextInt();
+        int hour = X/60;
+        if(hour%6!=0)
+        {
+            hour=hour+1;
+        }
+        int first = R1*N;
+        int second =  R2*(hour-N);
+        int cost = first+second;
+        System.out.println(cost+" ");
+        
+    }
+}
